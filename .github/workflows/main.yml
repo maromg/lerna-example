@@ -11,6 +11,12 @@ jobs:
           node-version: '14'
       - run: npm install -g bats
       - run: bats -v
+      - uses: ouzi-dev/commit-status-updater@v2
+        with:
+          status: "success"
+          url: http://myurl.io/
+          description: "this is my status check"
+          name: "name of my status check"
       
       
   check-jest-version:
